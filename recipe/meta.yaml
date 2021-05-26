@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5193bac524b099f00f3a9ef496dd8397592ca705945830c505a7f20ccd353aeb
+  sha256: bf0dfa8b30f26c4464ea5f285a0c7e91475fbc9fed3a02e1a7d5faeb233be6f6
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -29,7 +29,7 @@ requirements:
     - cf_xarray
     - click >7
     - climpred >=2.1
-    - clisops >=0.6.3
+    - clisops >=0.6.4
     - fiona
     - gdal
     - geopandas >=0.9
@@ -47,7 +47,7 @@ requirements:
     - scipy >=1.6.3
     - shapely
     - statsmodels
-    - xarray ==0.17
+    - xarray >=0.18
     - xclim >=0.26.1
 
 test:
