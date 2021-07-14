@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -19,7 +19,7 @@ requirements:
     - python >=3.7
     - setuptools
     - numpy
-    - gdal
+    - gdal >=3.0
     - pip
   run:
     - raven-hydro ==3.0.4.322
@@ -31,7 +31,7 @@ requirements:
     - climpred >=2.1
     - clisops >=0.6.4
     - fiona
-    - gdal
+    - gdal >=3.0
     - geopandas >=0.9
     - netcdf4
     - lxml
@@ -55,6 +55,7 @@ test:
     - ravenpy
   commands:
     - raven -v
+    - ostich
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
