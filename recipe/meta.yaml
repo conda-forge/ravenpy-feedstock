@@ -55,7 +55,7 @@ test:
     - ravenpy
   commands:
     - raven -v
-    - ostich
+    - ostrich
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
