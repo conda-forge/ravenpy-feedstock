@@ -11,15 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.7
     - setuptools
-    - numpy
-    - gdal >=3.0
+    - numpy >=1.20
+    - gdal
     - pip
   run:
     - raven-hydro ==3.0.4.322
@@ -31,12 +31,12 @@ requirements:
     - climpred >=2.1
     - clisops >=0.6.4
     - fiona
-    - gdal >=3.0
+    - gdal
     - geopandas >=0.9
     - netcdf4
     - lxml
     - matplotlib-base
-    - numpy
+    - numpy >=1.20
     - owslib
     - pandas >=1.2
     - pydantic
