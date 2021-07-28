@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e76bd1dd00d9230769cf7e215e41696bf42a1998cca44df596534dc015e03d31
+  sha256: 945a0578f9b261c6be7f8eaedc027d36b8861b6697683afc1a794ecd1b78b65e
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
