@@ -29,10 +29,10 @@ requirements:
     - cf_xarray
     - click >7
     - climpred >=2.1
-    - clisops >=0.6.4
     - fiona
     - gdal
     - geopandas >=0.9
+    - haversine
     - netcdf4
     - lxml
     - matplotlib-base
