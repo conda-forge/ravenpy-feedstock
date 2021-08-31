@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5658c9d14831c300fb646b42dbcaf4be2f0868d41fc2f52d66e4ad641657bf9a
+  sha256: 941056f5c9f32897bfa4599c3f4646a6c9a2af35a217b13294dfa1378123422c
 
 build:
   noarch: python
@@ -49,7 +49,7 @@ requirements:
     - shapely
     - statsmodels
     - xarray >=0.18
-    - xclim >=0.28.1
+    - xclim >=0.28.1,<0.29.0
 
 test:
   imports:
