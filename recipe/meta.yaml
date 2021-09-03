@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 941056f5c9f32897bfa4599c3f4646a6c9a2af35a217b13294dfa1378123422c
+  sha256: f82f288ff45ff6f6831259d52190da426d78ebea0de35fdb790bc965c2705c57
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - cftime
     - cf_xarray
     - click >7
-    - climpred >=2.1
+    - climpred >=2.1.0,<2.1.6
     - dask
     - fiona
     - gdal
