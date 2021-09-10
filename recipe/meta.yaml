@@ -28,7 +28,7 @@ requirements:
     - cftime
     - cf_xarray
     - click >7
-    - climpred >=2.1.0,<2.1.6
+    - climpred >=2.1.6
     - dask
     - fiona
     - gdal
@@ -42,14 +42,14 @@ requirements:
     - pandas
     - pydantic
     - pyproj >=3
-    - rasterio
+    - rasterio <=1.2.6
     - requests
     - rioxarray
     - scipy >=1.6.3
     - shapely
     - statsmodels
     - xarray >=0.18
-    - xclim >=0.28.1,<0.29.0
+    - xclim >=0.29.0
 
 test:
   imports:
