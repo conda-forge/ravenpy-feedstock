@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6150fddb4248d3b1f72c9a42e9abf8908847456afb93852a8b2cb8c6cda06c43
+  sha256: 3565a425fdae271ee539fb072f8085f8d75182e1b96fa12864afe18ac0ef9e61
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
     - python >=3.7
     - setuptools
     - numpy >=1.20
-    - gdal
+    - gdal >=3.0
     - pip
   run:
     - raven-hydro ==3.0.4.322
@@ -31,14 +31,14 @@ requirements:
     - climpred >=2.1.6
     - dask
     - fiona
-    - gdal
+    - gdal >=3.0
     - geopandas >=0.9
     - haversine
     - netcdf4
     - lxml
     - matplotlib-base
     - numpy
-    - owslib
+    - owslib >=0.24.1
     - pandas
     - pydantic
     - pyproj >=3
@@ -46,7 +46,7 @@ requirements:
     - requests
     - rioxarray
     - scipy >=1.6.3
-    - shapely
+    - shapely <=1.7.1
     - statsmodels
     - xarray >=0.18
     - xclim >=0.29.0
