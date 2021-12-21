@@ -41,12 +41,12 @@ requirements:
     - owslib >=0.24.1
     - pandas
     - pydantic
-    - pyproj >=3
-    - rasterio <=1.2.6
+    - pyproj >=3.0
+    - rasterio
     - requests
     - rioxarray
     - scipy >=1.6.3
-    - shapely <=1.7.1
+    - shapely
     - statsmodels
     - xarray >=0.18
     - xclim >=0.29.0
