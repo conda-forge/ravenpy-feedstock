@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.7.6" %}
+{% set version = "0.7.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3565a425fdae271ee539fb072f8085f8d75182e1b96fa12864afe18ac0ef9e61
+  sha256: 3e56c2b74edab66b42412148789c7e2dda957f992416baad0383d66bb0bb6add
 
 build:
   noarch: python
@@ -41,12 +41,12 @@ requirements:
     - owslib >=0.24.1
     - pandas
     - pydantic
-    - pyproj >=3
-    - rasterio <=1.2.6
+    - pyproj >=3.0
+    - rasterio
     - requests
     - rioxarray
     - scipy >=1.6.3
-    - shapely <=1.7.1
+    - shapely
     - statsmodels
     - xarray >=0.18
     - xclim >=0.29.0
