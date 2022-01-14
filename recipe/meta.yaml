@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.7.7" %}
+{% set version = "0.7.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3e56c2b74edab66b42412148789c7e2dda957f992416baad0383d66bb0bb6add
+  sha256: 289c26900d464617a5981b0f9c35e732c0dee144e5f822c30858c23a66283713
 
 build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  script_env:
+    - CONDA_BUILD
 
 requirements:
   host:
@@ -50,13 +52,17 @@ requirements:
     - statsmodels
     - xarray >=0.18
     - xclim >=0.29.0
+    - xskillscore
 
 test:
+  requires:
+    - pip
   imports:
     - ravenpy
   commands:
     - raven -v
     - ostrich
+    - pip check
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
