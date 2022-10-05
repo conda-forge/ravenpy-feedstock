@@ -49,6 +49,7 @@ requirements:
     - rioxarray
     - scipy >=1.6.3
     - shapely
+    - spotpy
     - statsmodels
     - xarray >=0.18
     - xclim >=0.29.0
