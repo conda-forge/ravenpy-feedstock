@@ -42,6 +42,7 @@ requirements:
     - numpy
     - owslib >=0.24.1
     - pandas
+    - pint <0.20 # Temporary pin for xclim. See: https://github.com/Ouranosinc/xclim/issues/1211
     - pydantic
     - pyproj >=3.0
     - rasterio
