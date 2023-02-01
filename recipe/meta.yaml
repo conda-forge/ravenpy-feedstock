@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - raven-hydro ==3.5
-    - ostrich ==21.03.16
+    - ostrich ==21.03.16  # [not win]
     - python >=3.8
     - cftime
     - cf_xarray
@@ -64,7 +64,7 @@ test:
     - ravenpy
   commands:
     - raven -v
-    - ostrich
+    - ostrich  # [not win]
     - pip check
 
 about:
