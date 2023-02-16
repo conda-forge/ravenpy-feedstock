@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5174f9c2dfe5bbd962e047fd3cdb3473bb99e30ce6d032e3203cdfd03da6d9c9
+  sha256: 9185df9e3f0ff1962b98ddca698045ec2ca83456e01dce52c80ba6d54632a275
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
