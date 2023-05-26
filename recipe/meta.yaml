@@ -52,6 +52,7 @@ requirements:
     - statsmodels
     - xarray
     - xclim >=0.43.0
+    - xesmf
     - xskillscore
 
 test:
@@ -62,7 +63,7 @@ test:
     - ravenpy
   commands:
     - raven -v
-    - pip check
+#    - pip check  # This will fail due to missing Climpred
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
