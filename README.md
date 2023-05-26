@@ -1,11 +1,11 @@
-About ravenpy
-=============
+About ravenpy-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ravenpy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/CSHS-CWRA/RavenPy
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ravenpy-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python wrapper to setup and run the hydrologic modelling framework Raven.
 
