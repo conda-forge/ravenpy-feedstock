@@ -26,7 +26,7 @@ requirements:
     - cftime
     - cf_xarray
     - click >=8.0.0
-    - climpred >=2.2
+#    - climpred >=2.2  # Removed due to stale dependencies causing resolver issues with raven-hydro v0.2.1
     - dask
     - fiona >=1.9
     - gdal >=3.0
