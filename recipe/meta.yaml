@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.10.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5174f9c2dfe5bbd962e047fd3cdb3473bb99e30ce6d032e3203cdfd03da6d9c9
+  sha256: cc932b236a9a5173609f744a19539e72ee51ccf635d41a7f1e61c3f771daa1f0
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
@@ -19,32 +18,30 @@ build:
 requirements:
   host:
     - python >=3.8
-    - setuptools
-    - numpy >=1.20
-    - gdal >=3.0
     - pip
+    - flit
   run:
-    - raven-hydro ==3.5
-    - ostrich ==21.03.16
-    - python >=3.8
+    - raven-hydro ==0.2.1
+    - python
     - cftime
     - cf_xarray
-    - click >7
-    - climpred >=2.1
+    - click >=8.0.0
+    - climpred >=2.2
     - dask
-    - fiona
+    - fiona >=1.9
     - gdal >=3.0
-    - geopandas >=0.9
+    - geopandas >=0.13
     - haversine
     - netcdf4
     - lxml
     - matplotlib-base
     - numpy
-    - owslib >=0.24.1
-    - pandas
+    - owslib >=0.24.1,<0.29
+    - pandas <2.0  # [py==38]
+    - pandas  # [py>=39]
     - pint >=0.20
-    - pydantic
-    - pyproj >=3.0
+    - pydantic >=1.10.8
+    - pyproj >=3.0.0
     - rasterio
     - requests
     - rioxarray
@@ -52,8 +49,8 @@ requirements:
     - shapely
     - spotpy
     - statsmodels
-    - xarray >=0.18,<2022.11.0 # Temporary pin for Climpred. See: https://github.com/CSHS-CWRA/RavenPy/pull/223#issuecomment-1309476180
-    - xclim >=0.39.0
+    - xarray
+    - xclim >=0.43.0
     - xskillscore
 
 test:
