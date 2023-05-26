@@ -10,7 +10,7 @@ source:
   sha256: cc932b236a9a5173609f744a19539e72ee51ccf635d41a7f1e61c3f771daa1f0
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
@@ -26,7 +26,7 @@ requirements:
     - cf_xarray
     - cftime
     - click >=8.0.0
-#    - climpred >=2.2  # Removed due to stale dependencies causing resolver issues with raven-hydro v0.2.1
+    - climpred >=2.3
     - dask
     - fiona >=1.9
     - gdal >=3.0
@@ -52,18 +52,16 @@ requirements:
     - statsmodels
     - xarray
     - xclim >=0.43.0
-    - xesmf
     - xskillscore
 
 test:
   requires:
     - pip
-    - pytest-json-report # Added due to a packaging bug with ESMPy. See: https://github.com/esmf-org/esmf/issues/115
   imports:
     - ravenpy
   commands:
     - raven -v
-#    - pip check  # This will fail due to missing Climpred
+    - pip check
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
