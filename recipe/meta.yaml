@@ -23,8 +23,8 @@ requirements:
   run:
     - raven-hydro ==0.2.1
     - python
-    - cftime
     - cf_xarray
+    - cftime
     - click >=8.0.0
 #    - climpred >=2.2  # Removed due to stale dependencies causing resolver issues with raven-hydro v0.2.1
     - dask
@@ -32,9 +32,9 @@ requirements:
     - gdal >=3.0
     - geopandas >=0.13
     - haversine
-    - netcdf4
     - lxml
     - matplotlib-base
+    - netcdf4
     - numpy
     - owslib >=0.24.1,<0.29
     - pandas <2.0  # [py==38]
