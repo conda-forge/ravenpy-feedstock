@@ -18,8 +18,8 @@ build:
 requirements:
   host:
     - python
-    - pip
     - flit
+    - pip
   run:
     - raven-hydro ==0.2.1
     - python
