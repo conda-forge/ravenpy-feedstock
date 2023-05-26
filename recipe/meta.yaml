@@ -52,7 +52,6 @@ requirements:
     - statsmodels
     - xarray
     - xclim >=0.43.0
-    - xesmf
     - xskillscore
 
 test:
