@@ -10,7 +10,7 @@ source:
   sha256: cc932b236a9a5173609f744a19539e72ee51ccf635d41a7f1e61c3f771daa1f0
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
