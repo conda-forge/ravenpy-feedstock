@@ -41,6 +41,7 @@ requirements:
     - pandas  # [py>=39]
     - pint >=0.20
     - pydantic >=1.10.8
+    - pymbolic
     - pyproj >=3.0.0
     - rasterio
     - requests
