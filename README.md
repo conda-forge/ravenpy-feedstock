@@ -245,4 +245,5 @@ Feedstock Maintainers
 
 * [@Zeitsperre](https://github.com/Zeitsperre/)
 * [@cjauvin](https://github.com/cjauvin/)
+* [@huard](https://github.com/huard/)
 
