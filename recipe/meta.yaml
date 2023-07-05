@@ -21,8 +21,9 @@ requirements:
     - flit
     - pip
   run:
-    - raven-hydro ==0.2.1
     - python
+    - raven-hydro ==0.2.3
+    - affine
     - cf_xarray
     - cftime
     - click >=8.0.0
@@ -35,13 +36,14 @@ requirements:
     - lxml
     - matplotlib-base
     - netcdf4
-    - numpy
+    - numpy <1.25.0
     - owslib >=0.24.1,<0.29
     - pandas <2.0  # [py==38]
     - pandas  # [py>=39]
     - pint >=0.20
-    - pydantic >=1.10.8
+    - pydantic >=1.10.8,<2.0
     - pymbolic
+    - pyogrio
     - pyproj >=3.0.0
     - rasterio
     - requests
@@ -74,6 +76,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - huard
     - Zeitsperre
+    - huard
     - cjauvin
