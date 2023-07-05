@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71b279d7d107655573eed125fdf29190bacc81a4def4660fc49a480555cc4e2b
+  sha256: 27acb6841e7cd422dbfc61047e00e9998e68e86f24c90b636e317de200f23dc8
 
 build:
   number: 0
@@ -21,8 +21,9 @@ requirements:
     - flit
     - pip
   run:
-    - raven-hydro ==0.2.1
     - python
+    - raven-hydro ==0.2.3
+    - affine
     - cf_xarray
     - cftime
     - click >=8.0.0
@@ -35,13 +36,14 @@ requirements:
     - lxml
     - matplotlib-base
     - netcdf4
-    - numpy
+    - numpy <1.25.0
     - owslib >=0.24.1,<0.29
     - pandas <2.0  # [py==38]
     - pandas  # [py>=39]
     - pint >=0.20
-    - pydantic >=1.10.8
+    - pydantic >=1.10.8,<2.0
     - pymbolic
+    - pyogrio
     - pyproj >=3.0.0
     - rasterio
     - requests
@@ -74,6 +76,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - huard
     - Zeitsperre
+    - huard
     - cjauvin
