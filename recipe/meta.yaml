@@ -41,6 +41,7 @@ requirements:
     - pandas <2.0  # [py==38]
     - pandas  # [py>=39]
     - pint >=0.20
+    - platformdirs
     - pydantic >=1.10.8,<2.0
     - pymbolic
     - pyogrio
