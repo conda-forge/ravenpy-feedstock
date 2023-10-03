@@ -22,12 +22,12 @@ requirements:
     - pip
   run:
     - python
-    - raven-hydro ==0.2.3
+    - raven-hydro ==0.2.4
     - affine
     - cf_xarray
     - cftime
     - click >=8.0.0
-    - climpred >=2.3
+    - climpred >=2.2
     - dask
     - fiona >=1.9
     - gdal >=3.0
@@ -48,11 +48,11 @@ requirements:
     - rasterio
     - requests
     - rioxarray
-    - scipy >=1.6.3
+    - scipy
     - shapely
     - spotpy
     - statsmodels
-    - xarray
+    - xarray >=2022.12.0,<2023.9.0  # xarray v2023.9.0 is incompatible with xclim<=0.45.0
     - xclim >=0.43.0
     - xskillscore
 
@@ -72,7 +72,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: A Python wrapper to setup and run the hydrologic modelling framework Raven.
+  summary: A Python package to help run Raven, the hydrologic modelling framework.
 
 extra:
   recipe-maintainers:
