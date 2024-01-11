@@ -24,14 +24,16 @@ requirements:
     - python
     - raven-hydro ==0.2.4
     - affine
-    - cf_xarray
+    - cf_xarray <0.8.5  # [py==38]
+    - cf_xarray  # [py>=39]
     - cftime
     - click >=8.0.0
-    - climpred >=2.2
+    - climpred >=2.4.0
     - dask
     - fiona >=1.9
     - gdal >=3.0
-    - geopandas >=0.13
+    - geopandas >=0.13.0
+    - h5netcdf
     - haversine
     - lxml
     - matplotlib-base
@@ -42,7 +44,7 @@ requirements:
     - pandas  # [py>=39]
     - pint >=0.20
     - platformdirs
-    - pydantic >=1.10.8,<2.0
+    - pydantic >=2.0
     - pymbolic
     - pyogrio
     - pyproj >=3.0.0
