@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 649500c0f67b14844ffae2410c6d0b3de25afc4ec1885625e9012d53bf329ed8
+  sha256: 2ff324a73a2aa2be7bad7c4c200f0aab201d1e145220dd47f838aaf91983b9ca
 
 build:
   number: 0
