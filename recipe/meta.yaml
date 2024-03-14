@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - flit
     - pip
   run:
-    - python
+    - python >=3.9
     - raven-hydro >=0.2.4,<1.0
     - affine
     - cf_xarray
