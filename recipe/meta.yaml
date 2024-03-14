@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 649500c0f67b14844ffae2410c6d0b3de25afc4ec1885625e9012d53bf329ed8
+  sha256: 2ff324a73a2aa2be7bad7c4c200f0aab201d1e145220dd47f838aaf91983b9ca
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
@@ -17,15 +18,14 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - flit
     - pip
   run:
-    - python
-    - raven-hydro ==0.2.4
+    - python >=3.9
+    - raven-hydro >=0.2.4,<1.0
     - affine
-    - cf_xarray <0.8.5  # [py==38]
-    - cf_xarray  # [py>=39]
+    - cf_xarray
     - cftime
     - click >=8.0.0
     - climpred >=2.4.0
@@ -39,9 +39,8 @@ requirements:
     - matplotlib-base
     - netcdf4
     - numpy <1.25.0
-    - owslib >=0.24.1,<0.29
-    - pandas <2.0  # [py==38]
-    - pandas  # [py>=39]
+    - owslib >=0.24.1,<0.29  # see: https://github.com/geopython/OWSLib/issues/871
+    - pandas >=2.2.0
     - pint >=0.20
     - platformdirs
     - pydantic >=2.0
@@ -56,8 +55,8 @@ requirements:
     - spotpy
     - statsmodels
     - typing_extensions
-    - xarray >=2022.12.0,<2023.9.0  # xarray v2023.9.0 is incompatible with xclim<=0.45.0. See: https://github.com/Ouranosinc/xclim/issues/1534
-    - xclim >=0.43.0
+    - xarray >=2023.11.0
+    - xclim >=0.48.2
     - xskillscore
 
 test:
@@ -67,7 +66,7 @@ test:
     - ravenpy
   commands:
     - raven -v
-    # - pip check  # Skipped. Refer to bug report detailed at: https://github.com/pydata/sparse/issues/626
+    - pip check
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
