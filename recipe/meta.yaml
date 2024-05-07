@@ -32,20 +32,21 @@ requirements:
     - dask
     - fiona >=1.9
     - gdal >=3.0
-    - geopandas >=0.13.0
+    - geopandas >=0.14.0
     - h5netcdf
     - haversine
     - lxml
     - matplotlib-base
     - netcdf4
     - numpy
-    - owslib >=0.24.1,<0.29  # see: https://github.com/geopython/OWSLib/issues/871
+    - owslib >=0.29.1
     - pandas >=2.2.0
     - pint >=0.20
     - platformdirs
     - pydantic >=2.0
+    - pydap
     - pymbolic
-    - pyogrio
+    - pyogrio <0.8.0
     - pyproj >=3.0.0
     - rasterio
     - requests
