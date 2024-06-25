@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.14.1" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7bb6102f35957e82076b4fcf539fa26e743a39e98a73a41ef460a6394d98dcac
+  sha256: bbb2d7f59956a83adad7dd304403bef7cf27ae4e68c3947217efb34c5cfc4c0e
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - raven-hydro >=0.2.4,<1.0
+    - raven-hydro >=0.3.1,<1.0
     - affine
     - cf_xarray
     - cftime
@@ -31,17 +31,17 @@ requirements:
     - climpred >=2.4.0
     - dask
     - fiona >=1.9
-    - gdal >=3.0
+    - gdal >=3.1
     - geopandas >=0.14.0
     - h5netcdf
     - haversine
     - lxml
     - matplotlib-base
-    - netcdf4
-    - numpy
+    - netcdf4 <=1.6.5
+    - numpy <2.0.0
     - owslib >=0.29.1
     - pandas >=2.2.0
-    - pint >=0.20
+    - pint >=0.20,<0.24
     - platformdirs
     - pydantic >=2.0
     - pydap
@@ -57,7 +57,7 @@ requirements:
     - statsmodels
     - typing_extensions
     - xarray >=2023.11.0
-    - xclim >=0.48.2
+    - xclim >=0.50.0
     - xskillscore
 
 test:
