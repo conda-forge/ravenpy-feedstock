@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bbb2d7f59956a83adad7dd304403bef7cf27ae4e68c3947217efb34c5cfc4c0e
+  sha256: c095e4dda876a8718a0c255b80cc68cdf7e4e754c5cc2a6d8b534dcf27578b30
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - python >=3.9
-    - flit
+    - flit-core >=3.9,<4.0
     - pip
   run:
     - python >=3.9
@@ -38,7 +38,7 @@ requirements:
     - lxml
     - matplotlib-base
     - netcdf4 <=1.6.5
-    - numpy <2.0.0
+    - numpy >=1.23,<2.0.0
     - owslib >=0.29.1
     - pandas >=2.2.0
     - pint >=0.20,<0.24
