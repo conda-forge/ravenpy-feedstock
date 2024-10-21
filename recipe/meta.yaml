@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - python >=3.9
-    - flit
+    - flit-core >-3.9,<4.0
     - pip
   run:
     - python >=3.9
@@ -38,7 +38,7 @@ requirements:
     - lxml
     - matplotlib-base
     - netcdf4 <=1.6.5
-    - numpy <2.0.0
+    - numpy >=1.23,<2.0.0
     - owslib >=0.29.1
     - pandas >=2.2.0
     - pint >=0.20,<0.24
