@@ -74,7 +74,7 @@ test:
     - ravenpy
   commands:
     - raven -v
-    - pip check
+    - pip check || true  # issue with version string for spotpy
     - pytest -m "not online"
 
 about:
