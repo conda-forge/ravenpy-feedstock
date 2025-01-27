@@ -63,12 +63,19 @@ requirements:
 test:
   requires:
     - pip
+    - pytest >=8.2.2
+    - pytest-xdist >=3.2.0
     - python {{ python_min }}
+  source_files:
+    - pyproject.toml
+    - src/ravenpy
+    - tests
   imports:
     - ravenpy
   commands:
     - raven -v
-    - pip check | true
+    - pip check
+    - pytest -m "not online"
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
