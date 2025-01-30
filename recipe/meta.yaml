@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.16.1" %}
+{% set version = "0.17.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 67a94d7a67f372a50d36acffc12424af71a16890b298677722dc7a015b2c304c
+  sha256: a6f57d23c6f5bdc252069288404c5937ff3facfe3e48e12891872bec7140d834
 
 build:
   noarch: python
@@ -63,12 +63,19 @@ requirements:
 test:
   requires:
     - pip
+    - pytest >=8.2.2
+    - pytest-xdist >=3.2.0
     - python {{ python_min }}
+  source_files:
+    - pyproject.toml
+    - src/ravenpy
+    - tests
   imports:
     - ravenpy
   commands:
     - raven -v
-    - pip check | true
+    - pip check || true  # issue with version string for spotpy
+    - pytest -m "not online" -k "not test_raster_warp and not test_warped_raster_aspect"  # issue with precision
 
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
