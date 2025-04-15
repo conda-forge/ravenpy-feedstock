@@ -151,6 +151,3 @@ Feedstock Maintainers
 * [@cjauvin](https://github.com/cjauvin/)
 * [@huard](https://github.com/huard/)
 
-
-<!-- dummy commit to enable rerendering -->
-
