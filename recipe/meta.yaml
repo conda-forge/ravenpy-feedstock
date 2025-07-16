@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.18.2" %}
+{% set version = "0.19.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2c7f42128e47416932ef0fd37edd8c1ba31dda88dd14575ff8fee6a5d3eb55a3
+  sha256: 192947cf3bd5844dd473178193d9a01ad9d02cba673e6782d2b5344df738f5f0
 
 build:
   noarch: python
