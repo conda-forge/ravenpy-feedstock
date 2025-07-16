@@ -38,6 +38,7 @@ requirements:
     - haversine >=2.8.0
     - lxml
     - matplotlib-base >=3.6.0
+    - netcdf4 >=1.7.2
     - numpy >=1.25.0
     - owslib >=0.29.1
     - pandas >=2.2.0
