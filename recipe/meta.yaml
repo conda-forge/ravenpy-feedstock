@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.9,<4.0
+    - flit-core >=3.10.1,<4.0
     - pip
   run:
     - python >={{ python_min }}
@@ -39,7 +39,7 @@ requirements:
     - lxml
     - matplotlib-base >=3.6.0
     - netcdf4 >=1.7.2
-    - numpy >=1.24.0
+    - numpy >=1.25.0
     - owslib >=0.29.1
     - pandas >=2.2.0
     - pint >=0.24.4
@@ -50,19 +50,21 @@ requirements:
     - pyproj >=3.3.0
     - rasterio
     - rioxarray
-    - scipy >=1.11.0
+    - scipy >=1.11.0,<1.16.0
     - shapely >=2.0
     - spotpy >=1.6.1
     - statsmodels >=0.14.2
     - typing_extensions
     - xarray >=2023.11.0,!=2024.10.0
-    - xclim >=0.55.1
+    - xclim >=0.57.0
+    - xsdba >=0.4.0
     - xskillscore
 
 test:
   requires:
     - pip
-    - pytest >=8.2.2
+    - pooch >=1.8.0
+    - pytest >=8.3.2
     - pytest-xdist >=3.2.0
     - python {{ python_min }}
   source_files:
