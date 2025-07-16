@@ -43,7 +43,6 @@ requirements:
     - owslib >=0.29.1
     - pandas >=2.2.0
     - pint >=0.24.4
-    - platformdirs >=4.3.6
     - pydantic >=2.11
     - pydap >=3.4.0,<3.5.5  # pydantic 3.5.5 not supported by xarray<=2025.3.0
     - pymbolic >=2024.2
