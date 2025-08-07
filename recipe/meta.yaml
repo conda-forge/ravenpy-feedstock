@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.19.0" %}
+{% set version = "0.19.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 192947cf3bd5844dd473178193d9a01ad9d02cba673e6782d2b5344df738f5f0
+  sha256: c76d9363db941a4730512b468fbf15c5cf35822ba5891c5ce7db39429456e13e
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - affine >=2.4.0
     - cf_xarray >=0.9.3
     - cftime >=1.4.1
-    - click >=8.0.0
+    - click >=8.2.0
     - climpred >=2.4.0
     - dask >=2024.8.1
     - fiona >=1.9
@@ -44,12 +44,12 @@ requirements:
     - pandas >=2.2.0
     - pint >=0.24.4
     - pydantic >=2.11
-    - pydap >=3.4.0,<3.5.5  # pydantic 3.5.5 not supported by xarray<=2025.3.0
+    - pydap >=3.4.0,<3.5.5  # pydap 3.5.5 is not currently supported by `xarray` (v2025.3.1)
     - pymbolic >=2024.2
     - pyproj >=3.3.0
     - rasterio
     - rioxarray
-    - scipy >=1.11.0,<1.16.0
+    - scipy >=1.11.0
     - shapely >=2.0
     - spotpy >=1.6.1
     - statsmodels >=0.14.2
