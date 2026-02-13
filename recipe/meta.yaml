@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.19.1" %}
+{% set version = "0.20.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c76d9363db941a4730512b468fbf15c5cf35822ba5891c5ce7db39429456e13e
+  sha256: 8c38111c82548a59809811076c99c61b3b3f1adb122362feee96bd3d318bec97
 
 build:
   noarch: python
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.10.1,<4.0
+    - flit-core >=3.11.0,<4.0
     - pip
   run:
     - python >={{ python_min }}
-    - raven-hydro >=0.4.0,<1.0
+    - raven-hydro >=0.5.0,<1.0
     - affine >=2.4.0
     - cf_xarray >=0.9.3
     - cftime >=1.4.1
@@ -44,7 +44,7 @@ requirements:
     - pandas >=2.2.0
     - pint >=0.24.4
     - pydantic >=2.11
-    - pydap >=3.4.0,<3.5.5  # pydap 3.5.5 is not currently supported by `xarray` (v2025.3.1)
+    - pydap >=3.5.6
     - pymbolic >=2024.2
     - pyproj >=3.3.0
     - rasterio
@@ -80,11 +80,14 @@ test:
 about:
   home: https://github.com/CSHS-CWRA/RavenPy
   dev_url: https://github.com/CSHS-CWRA/RavenPy
-  doc_url: https://ravenpy.readthedocs.io/en/latest/
+  doc_url: https://ravenpy.readthedocs.io/
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: A Python package to help run Raven, the hydrologic modelling framework.
+  summary: A Python wrapper for configuring and running the hydrologic modelling framework Raven.
+  description: |
+    RavenPy is a Python wrapper for Raven, accompanied by utility functions that
+    facilitate model configuration, calibration, and evaluation.
 
 extra:
   recipe-maintainers:
