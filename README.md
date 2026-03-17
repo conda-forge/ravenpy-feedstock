@@ -7,11 +7,15 @@ Home: https://github.com/CSHS-CWRA/RavenPy
 
 Package license: MIT
 
-Summary: A Python package to help run Raven, the hydrologic modelling framework.
+Summary: A Python wrapper for configuring and running the hydrologic modelling framework Raven.
 
 Development: https://github.com/CSHS-CWRA/RavenPy
 
-Documentation: https://ravenpy.readthedocs.io/en/latest/
+Documentation: https://ravenpy.readthedocs.io/
+
+RavenPy is a Python wrapper for Raven, accompanied by utility functions that
+facilitate model configuration, calibration, and evaluation.
+
 
 Current build status
 ====================

@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c38111c82548a59809811076c99c61b3b3f1adb122362feee96bd3d318bec97
+  sha256: b3677b102311b6371d76de09d262a2a3843d2760c5b89ee3650fbbc9c30f4d1b
 
 build:
   noarch: python
@@ -21,49 +21,47 @@ requirements:
   host:
     - python {{ python_min }}
     - flit-core >=3.11.0,<4.0
-    - pip
+    - pip >=26.0.1
   run:
     - python >={{ python_min }}
-    - raven-hydro >=0.5.0,<1.0
+    - raven-hydro >=4.12.1,<5.0
     - affine >=2.4.0
     - cf_xarray >=0.9.3
     - cftime >=1.4.1
-    - click >=8.2.0
-    - climpred >=2.4.0
-    - dask >=2024.8.1
+    - click >=8.3.1
+    - climpred >=2.6.0
+    - filelock >=3.14.0
     - fiona >=1.9
     - gdal >=3.1
     - geopandas >=1.0
-    - h5netcdf >=1.3.0
+    - h5netcdf >=1.5.0
     - haversine >=2.8.0
     - lxml
     - matplotlib-base >=3.6.0
     - netcdf4 >=1.7.2
     - numpy >=1.25.0
     - owslib >=0.29.1
+    - packaging
     - pandas >=2.2.0
     - pint >=0.24.4
     - pydantic >=2.11
-    - pydap >=3.5.6
     - pymbolic >=2024.2
     - pyproj >=3.3.0
     - rasterio
+    - requests >=2.32.2
     - rioxarray
     - scipy >=1.11.0
     - shapely >=2.0
     - spotpy >=1.6.1
     - statsmodels >=0.14.2
-    - typing_extensions
     - xarray >=2023.11.0,!=2024.10.0
     - xclim >=0.57.0
-    - xsdba >=0.4.0
-    - xskillscore
 
 test:
   requires:
-    - pip
+    - pip >=26.0.1
     - pooch >=1.8.0
-    - pytest >=8.3.2
+    - pytest >=9.0.2
     - pytest-xdist >=3.2.0
     - python {{ python_min }}
   source_files:
