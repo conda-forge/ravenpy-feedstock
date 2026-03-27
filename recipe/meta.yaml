@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
@@ -24,7 +24,6 @@ requirements:
     - pip >=26.0.1
   run:
     - python >={{ python_min }}
-    - raven-hydro >=4.12.1,<5.0
     - affine >=2.4.0
     - cf_xarray >=0.9.3
     - cftime >=1.4.1
@@ -56,6 +55,8 @@ requirements:
     - statsmodels >=0.14.2
     - xarray >=2023.11.0,!=2024.10.0
     - xclim >=0.57.0
+  run_constrained:
+    - raven-hydro >=4.12.1,<5.0
 
 test:
   requires:
@@ -64,6 +65,7 @@ test:
     - pytest >=9.0.2
     - pytest-xdist >=3.2.0
     - python {{ python_min }}
+    - raven-hydro >=4.12.1,<5.0
   source_files:
     - pyproject.toml
     - src/ravenpy
