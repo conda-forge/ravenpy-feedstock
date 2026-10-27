@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.21.0" %}
+{% set version = "0.21.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b3677b102311b6371d76de09d262a2a3843d2760c5b89ee3650fbbc9c30f4d1b
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9f02e9ee3d5b46a055319a467be62b641b14c6e8d7e55abb26dadafe097500c0
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
