@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.21.0" %}
+{% set version = "0.21.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b3677b102311b6371d76de09d262a2a3843d2760c5b89ee3650fbbc9c30f4d1b
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9f02e9ee3d5b46a055319a467be62b641b14c6e8d7e55abb26dadafe097500c0
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - CONDA_BUILD
@@ -20,12 +20,12 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.11.0,<4.0
-    - pip >=26.0.1
+    - flit-core >=3.12.0,<4.0
+    - pip
   run:
     - python >={{ python_min }}
     - affine >=2.4.0
-    - cf_xarray >=0.9.3
+    - cf-xarray >=0.9.3
     - cftime >=1.4.1
     - click >=8.3.1
     - climpred >=2.6.0
@@ -33,7 +33,8 @@ requirements:
     - fiona >=1.9
     - gdal >=3.1
     - geopandas >=1.0
-    - h5netcdf >=1.5.0
+    - h5netcdf
+    - h5py
     - haversine >=2.8.0
     - lxml
     - matplotlib-base >=3.6.0
@@ -74,7 +75,7 @@ test:
     - ravenpy
   commands:
     - raven -v
-    - pip check || true  # issue with version string for spotpy
+    - pip check
     - pytest -m "not online" -k "not test_raster_warp and not test_warped_raster_aspect"  # issue with precision
 
 about:
